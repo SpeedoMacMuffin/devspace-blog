@@ -1,15 +1,15 @@
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
-import Layout from "../components/Layout"
+import Layout from "@/components/Layout"
 import Link from 'next/link'
-import Post from '../components/Post'
-import {sortByDate} from '../utils'
+import Post from '@/components/Post'
+import {sortByDate} from '@/utils/index'
 
 export default function HomePage({ posts }) {
   
   return (
-    <Layout className="bg-blue-500">
+    <Layout>
       <h1 className='text-5xl border-b4 p-5'>Latest Posts</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {posts.map((post, index) => (
