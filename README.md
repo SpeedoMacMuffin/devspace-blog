@@ -1,5 +1,7 @@
 ## Static Next.js blog using Markdown for posts, with pagination, categories and search and Tailwind CSS for styling
 
+This Project is deployed on Vercel and can be found [here](https://macmuffin-dj-events.vercel.app/)
+
 ## Stack
 - Next.js
 - Tailwind CSS
