@@ -4,6 +4,11 @@
 - Next.js
 - Tailwind CSS
 
+### Other dependencies
+- gray-matter
+- marked
+- husky
+
 ## Usage
 Install Dependencies
 ```
