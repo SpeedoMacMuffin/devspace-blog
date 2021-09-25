@@ -8,13 +8,14 @@ import matter from 'gray-matter'
 import { getPosts } from '@/lib/posts'
 
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
+  const category = categories.filter(cat => cat.toLowerCase() === categoryName)
   return (
     <Layout>
-      <div className='flex justify-between'>
-        <div className='w-3/4 mr-10'>
-          <h1 className='text-5xl border-b-4 p-5 font-bold'>
-            Posts in {categoryName}
+          <h1 className='text-5xl border-b-4 pb-5 font-bold mx-5'>
+            Posts in {category[0]}
           </h1>
+      <div className='flex justify-between flex-col md:flex-row'>
+        <div className='lg:w-3/4 lg:mr-10 mx-5'>
 
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
             {posts.map((post, index) => (
@@ -23,8 +24,8 @@ export default function CategoryBlogPage({ posts, categoryName, categories }) {
           </div>
         </div>
 
-        <div className='w-1/4'>
-          <CategoryList categories={categories} />
+        <div className='lg:w-1/4'>
+          <CategoryList name={categoryName} categories={categories} />
         </div>
       </div>
     </Layout>
