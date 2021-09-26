@@ -36,6 +36,10 @@ ol {
   font-size: 27px;
 }
 
+pre {
+  overflow-x: scroll;
+}
+
 /* Fix category colors in production */
 .bg-yellow-600 {
   background-color: #d97705;
